@@ -1,0 +1,30 @@
+package com.WhatsApp.Common;
+
+import org.openqa.selenium.UnexpectedAlertBehaviour;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+
+
+public class BaseTest extends BasePage{
+
+	public BaseTest() {
+		super();
+		//PageFactory.initElements(driver, this);
+	}
+	
+	@BeforeMethod
+	public void SetUp(){
+		invoke();		
+	}
+	
+	@AfterMethod
+	public void testDown(){
+		driver.quit();
+	}
+	
+	
+}

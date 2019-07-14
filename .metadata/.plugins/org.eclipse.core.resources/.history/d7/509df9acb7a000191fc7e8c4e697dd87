@@ -1,0 +1,24 @@
+package com.WhatsApp.Common;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public abstract class BasePage {
+	
+	protected Properties prop;
+	
+	public BasePage() throws FileNotFoundException {
+		prop = new Properties();
+		FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/Resources");
+	}
+	
+	WebDriver driver = new ChromeDriver();
+
+	public void invoke(){
+		
+	}
+}

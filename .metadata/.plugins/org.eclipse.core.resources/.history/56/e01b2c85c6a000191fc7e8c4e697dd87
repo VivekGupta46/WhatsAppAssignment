@@ -1,0 +1,15 @@
+package com.WhatsApp.Pages;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.WhatsApp.Common.BasePage;
+
+public class LoginPage extends BasePage{
+
+	@FindBy(name="rememberMe")
+	WebElement rememberMe;
+
+}

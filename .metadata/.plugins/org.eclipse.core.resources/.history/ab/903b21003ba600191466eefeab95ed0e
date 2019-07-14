@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body{
+background-color: #00A3C0
+}
+</style>
+<H1 style="color:white; text-align:center;">WORK TO-DOS</H1>
+<p style="color:yellow; text-align:center;">Enter text into the input field to add items to your list.</p>
+<p style="color:green; text-align:center;">Enter text into the input field to add items to your list.</p>
+<p style="color:black; text-align:center;">Enter text into the input field to add items to your list.</p>
+
+
+</head>
+<body>
+
+</body>
+</html>

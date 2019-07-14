@@ -1,0 +1,10 @@
+package com.WhatsApp.Pages;
+
+import java.io.IOException;
+
+import com.WhatsApp.Common.BasePage;
+
+public class LoginPage extends BasePage{
+
+
+}

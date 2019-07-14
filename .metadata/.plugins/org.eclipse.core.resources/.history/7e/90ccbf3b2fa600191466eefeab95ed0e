@@ -1,0 +1,33 @@
+package com.WhatsApp.Tests;
+import java.util.Map;
+
+import org.testng.annotations.Test;
+
+import com.WhatsApp.Common.BaseTest;
+import com.WhatsApp.Pages.DashboardPage;
+import com.WhatsApp.Pages.LoginPage;
+public class LoginTest extends BaseTest{
+	
+	
+	public LoginTest() {
+		super();
+		//PageFactory.initElements(driver, this);
+	}
+	
+	@Test
+	public void test1() throws Exception{
+		LoginPage login = new LoginPage();
+		DashboardPage dashboard = new DashboardPage();
+		
+		Boolean t = login.isChecked();
+		System.out.println(t);	
+		
+		int nbrOfMsg = dashboard.getNbrOfNewMsg();
+		dashboard.clickOnGroup("Fucker Vivek");
+		Map<String, String> msg = dashboard.getTextMsg(nbrOfMsg);
+		dashboard.logValueInFile(msg);
+		dashboard.logout();
+		
+	}
+
+}

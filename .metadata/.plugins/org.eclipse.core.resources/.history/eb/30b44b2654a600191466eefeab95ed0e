@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+ var list = new Array();
+ var counter=1;
+ $("#txtSearch").keydown(function(e){
+  var keyCode = e.keyCode || e.which; 
+ 
+  if(keyCode==13 || keyCode==9)
+  {
+ 
+  let data = $('#txtSearch').val();
+   list.push(data);
+   
+   var htmlEle = "<div><label >" + data+ " </label><span id='spn_"+counter+"' onclick='javascript:removeEle(this)' style='cursor:pointer'>X</span></div>";
+
+   $("#listitems").append(htmlEle);
+   counter++;
+  }
+     
+ });
+
+});
+
+function removeEle(obj){ 
+     var labelID = $(obj).attr('id');
+     $('#'+labelID).parent().remove();
+ }
+ 
+.SearchBox {
+    width:400px;
+    height:50px;
+    background-color: #A12A1E;
+    color:White;
+    margin:0 auto;
+}
+ 
+</script>
+
+<style type="text/css">
+body{
+background-color: #00A3C0
+}
+</style>
+<H1 style="color:white; text-align:center;">WORK TO-DOS</H1>
+<p style="color: #F2C779; text-align:center;">Enter text into the input field to add items to your list.</p>
+<p style="color: #00C7B4U; text-align:center;">Click the item to mark it as complete.</p>
+<p style="color:black; text-align:center;">Click the "X" to remove the items from your list.</p>
+
+
+</head>
+<body>
+<center><div id="listitems" class="SearchBox">
+<input type="text" id="txtSearch" >
+</div></center>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WhatsApp_Automation/Resouces&apos; to &apos;Resources&apos;" description="Rename resource &apos;Resouces&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resouces" name="Resources" stamp="1562504516088" updateReferences="true"/>
+</session>

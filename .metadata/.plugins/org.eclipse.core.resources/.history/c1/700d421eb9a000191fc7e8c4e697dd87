@@ -1,0 +1,9 @@
+package com.WhatsApp.Common;
+
+public class BaseTest {
+
+	@Test
+	public void test(){
+		BasePage.invoke();
+	}
+}

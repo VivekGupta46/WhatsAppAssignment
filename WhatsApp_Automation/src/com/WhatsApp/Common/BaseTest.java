@@ -1,0 +1,26 @@
+package com.WhatsApp.Common;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+
+
+public class BaseTest extends BasePage{
+
+	public BaseTest() {
+		super();
+		//PageFactory.initElements(driver, this);
+	}
+	
+	@BeforeMethod
+	public void SetUp(){
+		invoke();		
+	}
+	
+	@AfterMethod
+	public void testDown(){
+		driver.quit();
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package com.WhatsApp.Pages;
+
+import java.io.IOException;
+
+import com.WhatsApp.Common.BasePage;
+
+public class LoginPage extends BasePage{
+
+	public LoginPage() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+}

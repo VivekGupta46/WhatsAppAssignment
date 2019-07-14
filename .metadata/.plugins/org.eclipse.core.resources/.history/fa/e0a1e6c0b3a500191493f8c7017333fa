@@ -1,0 +1,37 @@
+package com.WhatsApp.Common;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.WhatsApp.Pages.LoginPage;
+
+public class BaseTest extends BasePage{
+
+	public BaseTest() {
+		super();
+		//PageFactory.initElements(driver, this);
+	}
+	
+	@BeforeMethod
+	public void SetUp(){
+		invoke();
+	}
+	
+	@AfterMethod
+	public void testDown(){
+		driver.quit();
+	}
+	
+	@Test
+	public void test1() throws Exception{
+		LoginPage login = new LoginPage();
+		
+		Boolean t = login.isChecked();
+		System.out.println(t);
+		
+	//	DashboardPage dashboard = new DashboardPage();
+		//dashboard.clickOnGroup("Fucker Vivek");
+	}
+}

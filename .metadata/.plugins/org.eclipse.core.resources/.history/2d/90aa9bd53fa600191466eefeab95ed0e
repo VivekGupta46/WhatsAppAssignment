@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body{
+background-color: #00A3C0
+}
+</style>
+<H1 style="color:white; text-align:center;">WORK TO-DOS</H1>
+<p style="color: #F2C779; text-align:center;">Enter text into the input field to add items to your list.</p>
+<p style="color: #00C7B4U; text-align:center;">Click the item to mark it as complete.</p>
+<p style="color:black; text-align:center;">Click the "X" to remove the items from your list.</p>
+
+
+</head>
+<body>
+
+</body>
+</html>

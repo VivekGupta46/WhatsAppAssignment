@@ -1,0 +1,15 @@
+package com.WhatsApp.Tests;
+import org.testng.annotations.Test;
+
+import com.WhatsApp.Pages.LoginPage;
+public class LoginTest {
+	
+	@Test
+	public void test1(){
+		LoginPage login = new LoginPage();
+		
+		Boolean t = login.isChecked();
+		System.out.println(t);
+	}
+
+}

@@ -1,0 +1,45 @@
+package com.WhatsApp.Common;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public abstract class BasePage {
+	
+	protected static Properties prop;
+	public static WebDriver driver;
+	
+	public BasePage() {		
+		prop = new Properties();
+		FileInputStream ip;
+		try {
+			ip = new FileInputStream(System.getProperty("user.dir") + "/Resources/application.properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void invoke(){
+		String browerName = prop.getProperty("browser");
+		if(browerName.equalsIgnoreCase("chrome")){
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir"));
+			driver = new ChromeDriver();
+		}
+		
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		driver.get(prop.getProperty("env.baseurl"));
+	}
+}

@@ -1,0 +1,33 @@
+package com.WhatsApp.Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.WhatsApp.Common.BasePage;
+
+public class DashboardPage extends BasePage{
+	
+	public DashboardPage() {
+		PageFactory.initElements(driver, this);	
+	}
+
+	@FindBy(xpath="//span[text()='Fucker Vivek']/ancestor::div[@class='_2WP9Q']")
+	WebElement groupIdfr;
+	
+	public void clickOnGroup(String groupName) throws Exception{
+		
+		try{
+			
+			String idft = "//span[text()='"+groupName+"']/ancestor::div[@class='_2WP9Q']";
+WebElement element = driver.findElement(By.xpath(idft));
+			jse.executeScript("arguments[0].click();", element);
+			
+		}catch(Exception e){
+			throw new Exception(e.getMessage());
+		}
+		
+	}
+	
+}

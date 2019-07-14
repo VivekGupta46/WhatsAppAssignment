@@ -1,0 +1,13 @@
+package com.WhatsApp.Pages;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.WhatsApp.Common.BasePage;
+
+public class DashboardPage extends BasePage{
+	
+	public DashboardPage() {
+		PageFactory.initElements(driver, this);	
+	}
+
+}
